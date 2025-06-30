@@ -6,3 +6,4 @@ A simple schematic bank web app. It is not connected to any database and only ha
 { username: stw, password: 3333 }
 { username: ss, password: 4444 }
 ________________________________________
+netlify web address: https://bank-web-application-test.netlify.app/
