@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist</title>
+    <link
+      rel="stylesheet"
+      href="src/libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"
+    />
+    <script src="src/libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="src/style/Bankist_app.css" />
+  </head>
+  <body style="background-color: rgb(238, 234, 234)">
+    <nav class="navbar mt-3">
+      <div class="container-fluid">
+        <div class="col-3 text-center fs-5 a-welcome">Log in to get started</div>
+        <div class="col-4 text-center">
+          <img src="src/images/logo.png" style="height: 3.5rem" alt="" />
+        </div>
+        <div class="col-4">
+          <form class="d-flex ps-5 pe-2">
+            <input
+              class="form-control me-2 text-center rounded-pill a-user-in"
+              type="text"
+              placeholder="user"
+            />
+            <input
+              class="form-control me-2 text-center rounded-pill a-pin-in"
+              placeholder="PIN"
+            />
+            <button class="btn border-0 a-enter-account" type="submit">→</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5 opacity-0 a-app-container">
+      <div class="mx-5">
+        <div class="row">
+          <div class="col-7 text-start">
+            <div class="row fw-bold fs-4">Current balance</div>
+            <div class="row fw-light opacity-75 d-inline">As of <span class="a-current-time"> 30/07/2020, 18:03</span></div>
+          </div>
+          <div class="col-4 text-end ms-4 fs-1 a-current-balance">100000 $</div>
+        </div>
+        <div class="row mt-3">
+          <div
+            class="col-7 bg-white rounded-top a-movements-window"
+            style="height: 23rem; overflow-y: scroll"
+          >
+            <div class="row py-2 ps-5">
+              <div
+                class="col-auto rounded-pill text-light"
+                style="
+                  background-image: linear-gradient(
+                    to bottom right,
+                    rgb(168, 209, 104),
+                    rgb(19, 189, 19)
+                  );
+                "
+              >
+                8 deposits
+              </div>
+              <div class="col fw-light">&emsp; 12/03/2020</div>
+              <div class="col text-end pe-5">1000$</div>
+            </div>
+            <hr />
+            <div class="row py-2 ps-5">
+              <div
+                class="col-auto rounded-pill text-light"
+                style="
+                  background-image: linear-gradient(
+                    to bottom right,
+                    rgb(232, 156, 149),
+                    rgb(189, 19, 36)
+                  );
+                "
+              >
+                10 withdraws
+              </div>
+              <div class="col fw-light">&emsp; 12/03/2020</div>
+              <div class="col text-end pe-5">1000$</div>
+            </div>
+            <hr />
+          </div>
+          <div class="col-4 ms-5">
+            <div class="row bg-warning rounded-4" style="height: 7rem">
+              <div class="fw-bold pt-2 ms-3">Transfer Money</div>
+              <form class="row ms-1">
+                <div class="col-5 text-center">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm text-center a-transfer-to"
+                    style="background-color: rgba(255, 255, 255, 0.5)"
+                    id="transferto"
+                  />
+                  <label
+                    for="transferto"
+                    class="col-form-label col-form-label-sm"
+                    >Transfer To</label
+                  >
+                </div>
+                <div class="col-5 text-center">
+                  <input
+                    type="number"
+                    class="form-control form-control-sm text-center a-transfer-amount"
+                    style="background-color: rgba(255, 255, 255, 0.5)"
+                    id="Amount"
+                  />
+                  <label for="Amount" class="col-form-label col-form-label-sm"
+                    >Amount</label
+                  >
+                </div>
+                <div class="col-2">
+                  <button type="submit" class="btn btn-light btn-sm a-transfer-enter">→</button>
+                </div>
+              </form>
+            </div>
+
+            <div
+              class="row rounded-4 mt-3"
+              style="
+                background-image: linear-gradient(
+                  to bottom right,
+                  rgb(168, 209, 104),
+                  rgb(19, 189, 19)
+                );
+                height: 7rem;
+              ">
+              <div class="fw-bold pt-2 ms-3">Request Loan</div>
+              <form class="row ms-1">
+                <div class="col-5 text-center">
+                  <input
+                    type="number"
+                    class="form-control form-control-sm text-center a-loan"
+                    style="background-color: rgba(255, 255, 255, 0.5)"
+                    id="loanamount"
+                  />
+                  <label for="loanamount" class="col-form-label col-form-label-sm"
+                    >Amount</label
+                  >
+                </div>
+                <div class="col-2">
+                  <button type="submit" class="btn btn-light btn-sm a-loan-enter">→</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="row rounded-4 mt-3" style="background-image: linear-gradient(
+              to bottom right,
+              rgb(232, 156, 149),
+              rgb(189, 19, 36)
+            );height: 7rem">
+              <div class="fw-bold pt-2 ms-3">Close Account</div>
+              <form class="row ms-1">
+                <div class="col-5 text-center">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm text-center a-user-close"
+                    style="background-color: rgba(255, 255, 255, 0.5)"
+                    id="confirmuser"
+                  />
+                  <label
+                    for="confirmuser"
+                    class="col-form-label col-form-label-sm"
+                    >Confirm user</label
+                  >
+                </div>
+                <div class="col-5 text-center">
+                  <input
+                    type=""
+                    class="form-control form-control-sm text-center a-pin-close"
+                    style="background-color: rgba(255, 255, 255, 0.5)"
+                    id="ConfirmPIN"
+                  />
+                  <label for="ConfirmPIN" class="col-form-label col-form-label-sm"
+                    >Confirm PIN</label
+                  >
+                </div>
+                <div class="col-2">
+                  <button type="submit" class="btn btn-light btn-sm a-enter-close">→</button>
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-2 income">
+            IN
+            <span class="fs-3 a-sum-in" style="color: rgb(41, 213, 15)">000000</span> $
+          </div>
+          <div class="col-2 outgo">
+            OUT
+            <span class="fs-3 a-sum-out" style="color: rgb(234, 42, 42)">000000</span> $
+          </div>
+          <div class="col-2">
+            INTEREST
+            <span class="fs-3 a-interest" style="color: rgb(41, 213, 15)">0000</span> $
+          </div>
+          <button class="col-1 btn text-end  border-0 a-sort">&darr; Sort</button>
+          <div class="col-4 ms-4 opacity-50 text-end">
+            You will be logged out in <span class="a-end-timer">09:19</span> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/style/Bankist_app.js"></script>
+  </body>
+</html>
